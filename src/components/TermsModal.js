@@ -9,7 +9,7 @@ export default function TermsModal({ onAccept, onDecline }) {
     try {
       const token = localStorage.getItem("token");
 
-      await fetch("http://localhost:8000/api/terms/accept-terms", {
+      await fetch("https://noteshubbackend.vercel.app//api/terms/accept-terms", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
