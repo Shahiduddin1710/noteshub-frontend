@@ -44,8 +44,8 @@ const Files = () => {
   const token = localStorage.getItem("token");
 
   const apiUrl = subSubject
-    ? `http://localhost:8000/api/notes/${university}/${semester}/${subject}/${subSubject}`
-    : `http://localhost:8000/api/notes/${university}/${semester}/${subject}`;
+    ? `https://noteshubbackend.vercel.app/api/notes/${university}/${semester}/${subject}/${subSubject}`
+    : `https://noteshubbackend.vercel.app/api/notes/${university}/${semester}/${subject}`;
 
   const displayTitle = subSubject
     ? subSubject.toUpperCase().replace(/-/g, " ")

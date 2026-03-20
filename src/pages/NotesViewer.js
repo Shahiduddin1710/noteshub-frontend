@@ -8,7 +8,7 @@ const NotesViewer = () => {
   const [files, setFiles] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:8000/api/notes/${university}/${semester}/${subject}`)
+    fetch(`https://noteshubbackend.vercel.app/api/notes/${university}/${semester}/${subject}`)
       .then(res => res.json())
       .then(data => setFiles(data.files))
       .catch(err => console.log(err));
@@ -31,7 +31,7 @@ const NotesViewer = () => {
               <h3 className="card-title">{file}</h3>
 
               <a
-                href={`http://localhost:8000/notes/${university}/${semester}/${subject}/${file}`}
+                href={`https://noteshubbackend.vercel.app/notes/${university}/${semester}/${subject}/${file}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="notes-btn mu"

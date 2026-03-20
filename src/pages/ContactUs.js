@@ -42,7 +42,7 @@ const ContactUs = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const res = await fetch("http://localhost:8000/api/auth/contact", {
+      const res = await fetch("https://noteshubbackend.vercel.app/api/auth/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
