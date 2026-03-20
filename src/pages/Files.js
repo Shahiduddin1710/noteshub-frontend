@@ -51,6 +51,16 @@ const Files = () => {
     ? subSubject.toUpperCase().replace(/-/g, " ")
     : subject.toUpperCase().replace(/-/g, " ");
 
+  const handleBack = () => {
+    if (subSubject) {
+      navigate(`/subjects/${university}/${semester}`, {
+        state: { activeParent: subject }
+      });
+    } else {
+      navigate(`/subjects/${university}/${semester}`);
+    }
+  };
+
   useEffect(() => {
     const fetchFiles = async () => {
       setLoading(true);
@@ -88,7 +98,7 @@ const Files = () => {
     <div className="page-wrapper">
       <main className="page-container-wide">
         <div className="hero-card">
-          <button className="subjects-back-btn" onClick={() => navigate(-1)}>
+          <button className="subjects-back-btn" onClick={handleBack}>
             <BackIcon /> Go Back
           </button>
           <h1 className="hero-title">{displayTitle} Files</h1>
@@ -110,7 +120,7 @@ const Files = () => {
     <div className="page-wrapper">
       <main className="page-container-wide">
         <div className="hero-card">
-          <button className="subjects-back-btn" onClick={() => navigate(-1)}>
+          <button className="subjects-back-btn" onClick={handleBack}>
             <BackIcon /> Go Back
           </button>
           <h1 className="hero-title">{displayTitle} Files</h1>
@@ -139,7 +149,7 @@ const Files = () => {
     <div className="page-wrapper">
       <main className="page-container-wide">
         <div className="hero-card">
-          <button className="subjects-back-btn" onClick={() => navigate(-1)}>
+          <button className="subjects-back-btn" onClick={handleBack}>
             <BackIcon /> Go Back
           </button>
           <h1 className="hero-title">{displayTitle} Files</h1>
