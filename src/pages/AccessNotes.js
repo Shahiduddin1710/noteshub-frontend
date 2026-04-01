@@ -21,7 +21,7 @@ const AccessNotes = () => {
   const universityData = {
     mu: [
       { id: 3, name: "Sem 3", subjects: 5, files: "20+" },
-      { id: 4, name: "Sem 4", subjects: 5, files: "10+" }
+      { id: 4, name: "Sem 4", subjects: 5, files: "20+" }
     ],
     msbte: [
       { id: 4, name: "Sem 4", subjects: 3, files: 15 },

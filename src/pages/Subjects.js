@@ -21,7 +21,7 @@ const Subjects = () => {
   const subjectsData = {
     mu: {
       sem3: ["aoa", "coa", "maths", "dsgt", "genai"],
-      sem4: ["syllabus", "cth", "os", "dbms", "web-technologies", "oe-ibs", "lab-experiments", "assignments"]
+      sem4: ["syllabus", "cth", "os", "dbms", "web-technologies", "oe-ibs", "lab-experiments", "assignments" , "Business-Model-Development","Design-Thinking"]
     },
     msbte: {
       sem4: ["important-questions", "microproject", "syllabus"],
